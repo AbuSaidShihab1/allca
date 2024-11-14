@@ -1,0 +1,22 @@
+{
+  "name": "eassypay",
+  "version": "1.0.0",
+  "description": "easypay",
+  "scripts": {
+    "client": "cross-env NODE_ENV=development dotenv -e ./client/.env -- npm start --prefix client",
+    "server": "cross-env NODE_ENV=development node -r dotenv/config server/src/index.js dotenv_config_path=./server/.env",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "keywords": [
+    "easypay"
+  ],
+  "author": "easypay",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.4.5"
+  }
+}
